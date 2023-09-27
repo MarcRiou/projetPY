@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Page Pictures{% endblock %}
+
+{% block content %}
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">title</th>
+            <th scope="col">director</th>
+        </tr>
+        
+    </thead>
+    <tbody>
+        {% for picture in pictures %}
+        <tr>
+            <th scope="row">{{ picture['id'] }}</th>
+            {# picture/<id> dynamique #}
+            <td><a href="picture/{{picture['id']}}">{{ picture['title'] }}</a></td>
+            <td>{{ picture['director'] }}</td>
+        </tr>
+        {% endfor %}
+
+        
+        
+    </tbody>
+</table>
+{% endblock %}

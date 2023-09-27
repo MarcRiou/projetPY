@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Page Picture{% endblock %}
+
+{% block content %}
+{% if picture %}
+    <article>
+        <p>{{ picture['id'] }}</p>
+        <p>{{ picture['title'] }}</p>
+        <p>{{ picture['director'] }}</p>
+    </article>
+{% else %}
+   <p>No picture</p>
+{% endif %}
+{% endblock %}
